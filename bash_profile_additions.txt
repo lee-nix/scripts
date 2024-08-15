@@ -1,0 +1,46 @@
+###   SSH OTHER   ###
+alias deploytool="ssh -A -t root@$DEV_DEPLOY_TOOL 'cd /home/; bash'"
+alias rpi="ssh root@$RPI_TV -p 2222"
+alias ssh@jenkins='ssh jenkins@$JENKINS_IP'
+###   COMMANDS   ###
+alias numbers='open -a Numbers'
+alias textedit='open -a TextEdit'
+alias ll='ls -la'
+alias py3='python3'
+alias py2='python2'
+alias perm="stat -f '%N %p'"
+alias pp='pbpaste | python -m json.tool'
+alias pc='pbpaste | python -m json.tool | pbcopy'
+
+
+curl -s https://$JMP_RELEASE/inventory/json/lineup_state/ | jq -r '.hosts | to_entries[] | select(.value.roles[].role=="mail").value.roles[0].version' | sed -e 's/.*-//'
+
+
+changes-from-build-to-build() {
+   # usage: changes-from-build-to-build <branch> <from_build> <to_build>
+   # ex: changes-from-build-to-build 6.2.1.0 7446 latest
+   # ex: changes-from-build-to-build 6.2.1.0 7446 7449
+   # ex: changes-from-build-to-build 6.2.1.0 $( get-online-lineup-build multi-us ) 7995
+   curl -s https://$NPM_URL/teamcity_build_info/buildInfo/branch/$1/$3?begin=$2 | jq -r '.[].changesets[].message'
+}
+###   FUNCTIONS VERSION CONTROL/REPO   ###
+lsbc() {
+    #List link to all Jira changes is specified branch--must run in your code checkout folder for it to work
+    #Be sure to 'hg pull' first!
+    #ex: lsbc 6.0.35.0
+    hg log -b $1 | grep -o -E 'FRONSIXO-[0-9]{5}' | xargs -n1 | sort -u | sed -e 's/^/https:\/\/jira.ddilabs.io\/browse\//'
+}
+
+
+openbc() {
+    #Open links to all Jira changes in specified branch in your currently selected browser
+    #ex: openbc 6.0.35.0
+    hg log -b $1 | grep -o -E 'FRONSIXO-[0-9]{5}' | xargs -n1 | sort -u | sed -e 's/^/https:\/\/jira.ddilabs.io\/browse\//' | xargs open
+}
+
+
+###   ITERM SPECIFIC   ###
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+
+

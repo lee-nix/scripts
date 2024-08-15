@@ -1,0 +1,24 @@
+Known issues
+- invalid input for operator always causes divide() to be called
+    - best fix: add 'choices=['+', '-', 'x', '/'] @ ln: 48
+    - acceptable: change else to elif @ ln: 63
+- no type=int for second_int @ ln: 50
+    - best fix: add 'type=int'
+- 'x' operator passes in first_int for both args
+    - also manifests as 'x' operator always outputs 0
+    - best fix: change the second param of multiply() to args.second_int @ ln: 62
+- divide returns 0 for any value that should return less than 1.0
+    - also manifests as values should be cast as double for divide function, etc.
+    - best fix: cast 'first' and 'second' as float @ ln: 31 and add print formatting @ ln: 64
+- operator choice for multiplication is wrong in parser epilog
+    - best fix: change * to x @ ln: 42
+
+BONUS:
+- there is an extra 's' in expression @ ln: 51
+    - fix: remove the extra character
+- the epilog does not display the way it appears to based on the linebreaks included
+    - fix: many options, accept anything that works
+- user confusion between 'x' and 'X' is easy and likely
+    - fix: any solution to handle this in a minimal amount of code/doc changes
+- divide by zero error handling
+    - fix: catch and provide reasonable error.

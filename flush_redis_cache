@@ -1,0 +1,10 @@
+on app server
+echo "FLUSHALL" | redis-cli -h redis-broker.fvm
+echo "FLUSHALL" | redis-cli -h redis-cache.fvm
+echo "FLUSHALL" | redis-cli -h redis-pubsub.fvm
+echo "FLUSHALL" | redis-cli -h redis-sse.fvm
+
+BETTER:
+redis-cli -h 127.0.0.1 -p 6380
+127.0.0.1:6380> flushall
+OK

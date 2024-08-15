@@ -1,0 +1,71 @@
+Part 1: ~2 Hours
+
+Use any debugging tools available to you to find as many bugs as possible in buggy_calculator.py.
+Assume that everything written in buggy_calculator_README.txt is the correct implementation.
+Any differences in the program from the README are considered bugs.
+For each bug, try to identify the root cause in the program and, if possible, a fix for the bug.
+
+Your responses for each bug found should include as much detail as possible.
+They should represent your best efforts for documenting a bug as you would in a production environment.
+When suggesting a fix, be sure to consider the program's existing code and modules. Try to identify the best and lowest impact changes you can.
+
+Please include a copy of the program with fixes to any bugs you identify in the file: buggy_calculator_fixed.py
+
+You can ignore any errors you may find in the README.
+
+The application should be ran with Python 2.7.x but requires no additional packages beyond the Python Standard Library.
+
+Part 2: ~1 Hour
+
+Using the Python unittest library, write a set of unit tests for your version of buggy_calculator_fixed.py.
+Include at least one positive and one negative test case for each of the four functions (add, subtract, multiple, and divide).
+The unit tests should be written in the file: buggy_calculator_tests.py 
+Include the unit tests with your bug report and buggy_calculator_fixed.py files.
+
+
+------------------full text-----------------
+Hi <<<candidate>>>,
+ 
+It was great speaking with you today and we look forward to reviewing your responses to the exercise.
+As we discussed, the exercise is attached and should take about 2 hours to complete. You will find the instructions below.
+You can provide your answers any time between now and <<<day>>> (<<<date>>>) <<<morning/afternoon>>>.
+ 
+Exercise Instructions:
+Part 1: ~2 Hours
+
+Use any debugging tools available to you to find as many bugs as possible in buggy_calculator.py.
+Assume that everything written in buggy_calculator_README.txt is the correct implementation.
+Any differences in the program from the README are considered bugs.
+For each bug, try to identify the root cause in the program and, if possible, a fix for the bug.
+
+Your responses for each bug found should include as much detail as possible.
+They should represent your best efforts for documenting a bug as you would in a production environment.
+When suggesting a fix, be sure to consider the program's existing code and modules. Try to identify the best and lowest impact changes you can.
+
+Please include a copy of the program with fixes to any bugs you identify in the file: buggy_calculator_fixed.py
+
+You can ignore any errors you may find in the README.
+
+The application should be ran with Python 2.7.x but requires no additional packages beyond the Python Standard Library.
+
+Part 2: ~1 Hour
+
+Using the Python unittest library, write a set of unit tests for your version of buggy_calculator_fixed.py.
+Include at least one positive and one negative test case for each of the four functions (add, subtract, multiple, and divide).
+The unit tests should be written in the file: buggy_calculator_tests.py 
+Include the unit tests with your bug report and buggy_calculator_fixed.py files.
+
+Attached Files: 
+Sha1: 30da499bc205937c56b2bfebb0e4fcad54cdb026  buggy_calc.zip (included for your security to verify the attachment contents)
+buggy_calc.zip contents:
+buggy_calc/buggy_calculator.py
+buggy_calc/buggy_calculator_README.txt
+ 
+You can return your answers to me at this email. Please avoid using a PDF for your responses and, if possible, include all files in a single zip file before attaching.
+If you have any questions or any issues with the exercise please let me know.
+It’s possible that our email filters may strip out the attachments, if that happens please let me know ASAP and I will ensure I get them to you.
+ 
+Thanks again for taking the time to <<<come in and >>>speak with us today,
+Lee Nix
+Manager, Test Engineering
+Digital Defense Inc.

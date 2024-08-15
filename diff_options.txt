@@ -1,0 +1,2 @@
+#side by side view with changes indicated, ignore whitespace-only changes
+diff -a -w -y
